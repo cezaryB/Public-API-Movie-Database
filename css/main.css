@@ -1,0 +1,341 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+:root {
+	font-size: 16px;
+}
+
+body {
+	font-family: "Lato", sans-serif;
+	text-align: center;
+	background: grey url("../img/bg.png") repeat center;
+}
+
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.wrapper {
+	min-height: calc(100vh - 47px);
+}
+
+.movie-gallery-wrapper {
+	max-width: 980px;
+	margin: 0 auto;
+}
+
+h2 {
+	padding: 10px;
+	margin: 0;
+	background: #00ffcc;
+	color: #fff;
+	font-size: 1.3em;
+}
+
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+a:hover {
+	opacity: 0.7;
+}
+
+.search_panel {
+	position: fixed;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	top: 62.264px;
+	z-index: 10;
+	width: 100%;
+	margin: 0 auto;
+	padding: 10px 0;
+	background: #fff;
+}
+
+
+form label {
+	display: block;
+	flex-basis: 80%;
+	font-size: 0.8em;
+}
+form input {
+	width: 100%;
+	flex-basis: 100%;
+	padding-left: 8px;
+	margin: 10px 0;
+	border: 1px solid #d9d9d9;
+	border-radius: 4px;
+	font-size: 0.9em;
+	color: rgba(0, 0, 0, 0.8);
+}
+
+form input:focus {
+	outline: none;
+	border: 1px solid #00ffcc;
+	transition: 1s;
+}
+
+
+form input::-webkit-input-placeholder {
+	font-size: 0.7em;
+}
+
+form input::-moz-placeholder { /* Firefox 19+ */
+	font-size: 0.7em;
+}
+form input:-ms-input-placeholder { /* IE 10+ */
+	font-size: 0.7em;
+}
+form input:-moz-placeholder { /* Firefox 18- */
+	font-size: 0.7em;
+}
+
+input[type="submit"] {
+
+}
+
+.movie-gallery {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 50%;
+}
+
+.movie-title {
+	flex-basis: 80%;
+	padding-top: 3%;
+	padding-bottom: 3%;
+	border: 1px solid rgba(209, 209, 224, .7);
+	border-radius: 5px;
+	color: #535379;
+	transition: border 1s;
+}
+
+.movie-title:hover {
+	border: 1.9px solid #00ffcc;
+	font-weight: bold;
+}
+
+
+
+.footer {
+	width: 100%;
+	padding-bottom: 0;
+	color: white;
+	font-size: 0.9em;
+}
+
+
+
+/* jQuery elements styling */
+
+
+#overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+	min-height: 100vh;
+	display: none;
+	background: rgba(0, 0, 0, 0.7);
+	text-align: center;
+}
+
+.movieContainer {
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+	color: #fff;
+}
+
+.infoContainer {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 2%;
+
+}
+
+.movie-header {
+	flex-basis: 100%;
+	margin: 0;
+	margin-top: 1%;
+}
+
+.movie-type {
+	flex-basis: 100%;
+	margin: 1%;
+}
+
+.movie-year {
+	flex-basis: 100%;
+	margin: 1%;
+}
+
+
+.video_wrapper {
+	padding-top: 50%;
+}
+
+iframe {
+	display: inline-block;
+	width: 178px;
+	height: 100px;
+}
+
+.imageCaption {
+	width: 80%;
+	margin: 30px auto;
+	color: #fff;
+	font-size: 0.8em;
+}
+
+.arrow {
+	background: none;
+	text-decoration: none;
+	font-size: 1.3em;
+	color: #fff;
+	visibility: hidden;
+}
+
+#leftArrow {
+	position: absolute;
+	left: 1%;
+	top: 45%;
+}
+
+#rightArrow {
+	position: absolute;
+	right: 1%;
+	top: 45%;
+}
+
+.close {
+	position: absolute;
+	height: 40px;
+	right: 1%;
+	bottom: 1%;
+	font-size: 1.7em;
+	font-weight: bold;
+}
+
+@media (min-width: 375px) {
+	.arrow {
+		visibility: visible;
+	}
+
+	.close {
+		top: 1%;
+	}
+}
+
+@media (min-width: 420px) {
+	.movie-gallery {
+		margin-top: 30%;
+	}
+
+}
+
+
+@media (min-width: 768px) {
+
+	form input {
+		flex-basis: 100%;
+		padding: 10px 8px;
+		font-size: 1em;
+	}
+
+	.movie-gallery {
+		margin-top: 23%;
+	}
+
+	.movie-title {
+	flex-basis: 40%;
+	}
+
+	.movie-title:nth-child(odd) {
+		margin-right: 2%;
+	}
+
+	.infoContainer {
+		margin-top: 25%;
+
+	}
+	
+	.arrow {
+		font-size: 1.5em;
+	}
+
+	#leftArrow {
+		left: 20%;
+		top: 40%;
+	}
+
+	#rightArrow {
+		right: 20%;
+		top: 40%;
+	}
+
+	.close {
+	top: 5%;
+	right: 20%;
+	font-size: 1.9em;
+	font-weight: bold;
+}
+
+
+}
+
+@media (min-width: 1024px) {
+
+	.search_panel {
+		max-width: 1200px;
+		padding-top: 20px;
+	}
+
+	form input {
+		flex-basis: 100%;
+		width: 100%;
+	}
+
+	.movie-gallery {
+		margin-top: 17%;
+	}
+
+	/* jQuery elements styling */
+
+	.infoContainer {
+		margin-top: 5%;
+	}
+
+	.arrow {
+		font-size: 1.7em;
+	}
+
+
+	#leftArrow {
+
+	}
+
+	#rightArrow {
+
+	}
+
+	.close {
+		top: -3%;
+		font-size: 1.9em;
+		font-weight: bold;
+}
+
+
+}
